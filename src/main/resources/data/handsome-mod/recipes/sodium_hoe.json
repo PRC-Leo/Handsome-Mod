@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "# ",
+    "# "
+  ],
+  "key": {
+    "S": { "item": "handsome-mod:sodium" },
+    "#": { "item": "minecraft:stick" }
+  },
+  "result": { "item": "handsome-mod:sodium_hoe" }
+}

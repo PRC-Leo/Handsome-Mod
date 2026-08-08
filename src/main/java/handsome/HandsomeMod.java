@@ -1,5 +1,8 @@
 package handsome;
 
+import handsome.block.ModBlocks;
+import handsome.item.ModItems;
+import handsome.world.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -20,5 +23,14 @@ public class HandsomeMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+
+		// 注册本模组的方块（钠矿 / 深层钠矿）
+		ModBlocks.registerModBlocks();
+
+		// 注册本模组的物品（含「钠」）
+		ModItems.registerModItems();
+
+		// 注册世界生成（铁矿按 30% 替换为钠矿）
+		ModWorldGen.generateModWorldGen();
 	}
 }
