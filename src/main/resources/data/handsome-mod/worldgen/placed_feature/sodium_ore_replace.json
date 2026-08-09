@@ -1,0 +1,9 @@
+{
+  "feature": "handsome-mod:sodium_ore_replace",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 1
+    }
+  ]
+}

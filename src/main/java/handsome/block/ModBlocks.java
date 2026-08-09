@@ -19,7 +19,7 @@ public class ModBlocks {
                     .requiresTool()
                     .strength(3.0F, 3.0F)
                     .sounds(BlockSoundGroup.STONE)
-                    .mapColor(MapColor.STONE)));
+                    .mapColor(MapColor.STONE_GRAY)));
 
     // 深层钠矿：属性对齐深层铁矿（硬度 4.5 / 抗爆 3.0）
     public static final Block DEEPSLATE_SODIUM_ORE = register("deepslate_sodium_ore",

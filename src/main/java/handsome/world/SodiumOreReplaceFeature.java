@@ -8,26 +8,26 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.StructureWorldAccess;
-import net.minecraft.world.gen.feature.EmptyFeatureConfig;
+import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureContext;
+import net.minecraft.world.gen.feature.util.FeatureContext;
 
 /**
  * 在世界生成时，将已生成的铁矿 / 深层铁矿按概率替换为钠矿 / 深层钠矿。
  * 约束：不会把钠矿放在「距离液体 5 格以内且视线无方块阻隔」的位置。
  */
-public class SodiumOreReplaceFeature extends Feature<EmptyFeatureConfig> {
+public class SodiumOreReplaceFeature extends Feature<DefaultFeatureConfig> {
     // 铁矿被替换为钠矿的概率
-    private static final float REPLACE_CHANCE = 0.3F;
+    private static final float REPLACE_CHANCE = 0.6F;
     // 与液体之间的最大距离（方块，切比雪夫半径）
     private static final int LIQUID_RADIUS = 5;
 
-    public SodiumOreReplaceFeature(Codec<EmptyFeatureConfig> codec) {
+    public SodiumOreReplaceFeature(Codec<DefaultFeatureConfig> codec) {
         super(codec);
     }
 
     @Override
-    public boolean generate(FeatureContext<EmptyFeatureConfig> context) {
+    public boolean generate(FeatureContext context) {
         StructureWorldAccess world = context.getWorld();
         BlockPos origin = context.getOrigin();
         Random random = context.getRandom();
