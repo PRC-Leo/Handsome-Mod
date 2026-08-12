@@ -3,6 +3,7 @@ package handsome;
 import handsome.block.ModBlocks;
 import handsome.item.ModItems;
 import handsome.world.ModWorldGen;
+import handsome.SodiumWaterBomb;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -32,5 +33,8 @@ public class HandsomeMod implements ModInitializer {
 
 		// 注册世界生成（铁矿按 30% 替换为钠矿）
 		ModWorldGen.generateModWorldGen();
+
+		// 注册「钠遇水爆炸」机制
+		SodiumWaterBomb.register();
 	}
 }
